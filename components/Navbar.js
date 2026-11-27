@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { Store } from "lucide-react";
 const MENU = [
-  { href: "#katalog", label: "Katalog" },
-  { href: "#tabel", label: "Tabel" },
-  { href: "#tentang", label: "Tentang" },
+  { href: "/", label: "Barang" },
+  { href: "/kasir", label: "Kasir" },
 ];
 
 export default function Navbar({ namaToko }) {
@@ -19,9 +18,9 @@ export default function Navbar({ namaToko }) {
         <ul className="flex gap-6 text-sm">
           {MENU.map((m) => (
             <li key={m.href}>
-              <a href={m.href} className="hover:text-teal-300">
+              <Link href={m.href} className="hover:text-teal300">
                 {m.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
